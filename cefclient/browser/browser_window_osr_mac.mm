@@ -15,6 +15,10 @@
 #include "cefclient/browser/geometry_util.h"
 #include "cefclient/browser/main_message_loop.h"
 
+#ifdef __OBJC__
+#import <Syphon/Syphon.h>
+#endif
+
 @interface BrowserOpenGLView
     : NSOpenGLView <NSDraggingSource, NSDraggingDestination> {
  @private
@@ -86,6 +90,8 @@
 
 
 namespace {
+
+SyphonServer *syphonServer;
 
 NSString* const kCEFDragDummyPboardType = @"org.CEF.drag-dummy-type";
 NSString* const kNSURLTitlePboardType = @"public.url-name";
@@ -1112,6 +1118,7 @@ BrowserWindowOsrMac::BrowserWindowOsrMac(BrowserWindow::Delegate* delegate,
       hidden_(false),
       painting_popup_(false) {
   client_handler_ = new ClientHandlerOsr(this, this, startup_url);
+
 }
 
 BrowserWindowOsrMac::~BrowserWindowOsrMac() {
@@ -1138,6 +1145,11 @@ void BrowserWindowOsrMac::CreateBrowser(
   CefBrowserHost::CreateBrowser(window_info, client_handler_,
                                 client_handler_->startup_url(),
                                 settings, request_context);
+
+
+  NSOpenGLContext *nsglContext = [GLView(nsview_) openGLContext]; // use the convenience function to cast our NSView reference to an NSOpenGLView
+  CGLContextObj cglContext = (CGLContextObj) nsglContext.CGLContextObj; // get the low-level, platform specific core openGL context object for Syphon
+  syphonServer = [[SyphonServer alloc] initWithName:@"CEF -> Syphon, go nuts!" context:cglContext options:nil];
 }
 
 void BrowserWindowOsrMac::GetPopupConfig(CefWindowHandle temp_handle,
@@ -1378,12 +1390,27 @@ void BrowserWindowOsrMac::OnPaint(
 
   ScopedGLContext scoped_gl_context(GLView(nsview_), true);
 
-  renderer_.OnPaint(browser, type, dirtyRects, buffer, width, height);
+  unsigned int texId = renderer_.OnPaint(browser, type, dirtyRects, buffer, width, height);
+
   if (type == PET_VIEW && !renderer_.popup_rect().IsEmpty()) {
     painting_popup_ = true;
     browser->GetHost()->Invalidate(PET_POPUP);
     painting_popup_ = false;
   }
+
+  if ([syphonServer hasClients]) {
+    NSRect rect = NSMakeRect(0, 0, renderer_.GetViewWidth(), renderer_.GetViewHeight());
+
+    // publish our frame to our server. We use the whole texture, but we could just publish a region of it
+    CGLLockContext(syphonServer.context);
+    [syphonServer publishFrameTexture:texId
+                        textureTarget:GL_TEXTURE_2D
+                          imageRegion:rect
+                    textureDimensions:rect.size
+                              flipped:YES];
+    CGLUnlockContext(syphonServer.context);
+  }
+
   renderer_.Render();
 }
 

@@ -84,6 +84,8 @@
 		29C23200F50247DDB17B029D /* window_icon.2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2A9315C9A334183859C7BBF /* window_icon.2x.png */; settings = {COMPILER_FLAGS = ""; }; };
 		29DA3BC01D1767C7005C74C2 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29DA3BBF1D1767C2005C74C2 /* Syphon.framework */; };
 		29DA3BC11D1767C7005C74C2 /* Syphon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 29DA3BBF1D1767C2005C74C2 /* Syphon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		29DA3BC51D179849005C74C2 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29DA3BC41D179849005C74C2 /* AppKit.framework */; };
+		29DA3BC71D17986D005C74C2 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29DA3BC61D17986D005C74C2 /* OpenGL.framework */; };
 		2DFBD0E7818D4E8BB03FF868 /* stream_reader_ctocpp.cc in Sources */ = {isa = PBXBuildFile; fileRef = AABEA05142A246C1AEF06521 /* stream_reader_ctocpp.cc */; settings = {COMPILER_FLAGS = ""; }; };
 		2E55ADD6E5B34C34BFDDBBBA /* urlrequest.html in Resources */ = {isa = PBXBuildFile; fileRef = CF47FB68DF7E43A880CABEF3 /* urlrequest.html */; settings = {COMPILER_FLAGS = ""; }; };
 		2FC2F1FD3DDC4B029180E7D8 /* bytes_write_handler.cc in Sources */ = {isa = PBXBuildFile; fileRef = E0F7E6BB64764F0EA665BC46 /* bytes_write_handler.cc */; settings = {COMPILER_FLAGS = ""; }; };
@@ -519,6 +521,8 @@
 		2920319324C742E0868568A7 /* browser_host_ctocpp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = browser_host_ctocpp.h; path = libcef_dll/ctocpp/browser_host_ctocpp.h; sourceTree = SOURCE_ROOT; };
 		29317A7CE31A4445A74985F4 /* scroll_view_ctocpp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = scroll_view_ctocpp.h; path = libcef_dll/ctocpp/views/scroll_view_ctocpp.h; sourceTree = SOURCE_ROOT; };
 		29DA3BBF1D1767C2005C74C2 /* Syphon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Syphon.framework; sourceTree = "<group>"; };
+		29DA3BC41D179849005C74C2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		29DA3BC61D17986D005C74C2 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		2ABA4D9CE47E42F5BFAE7292 /* app_cpptoc.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = app_cpptoc.h; path = libcef_dll/cpptoc/app_cpptoc.h; sourceTree = SOURCE_ROOT; };
 		2B32D9A257F04D0E9B039FDC /* menu_model_ctocpp.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = menu_model_ctocpp.cc; path = libcef_dll/ctocpp/menu_model_ctocpp.cc; sourceTree = SOURCE_ROOT; };
 		2B64EB1C18E442DA811C80D5 /* stream_reader_ctocpp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = stream_reader_ctocpp.h; path = libcef_dll/ctocpp/stream_reader_ctocpp.h; sourceTree = SOURCE_ROOT; };
@@ -1048,6 +1052,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29DA3BC71D17986D005C74C2 /* OpenGL.framework in Frameworks */,
+				29DA3BC51D179849005C74C2 /* AppKit.framework in Frameworks */,
 				29DA3BC01D1767C7005C74C2 /* Syphon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1991,6 +1997,8 @@
 		EB0C188B9C41467DAA05C5C4 = {
 			isa = PBXGroup;
 			children = (
+				29DA3BC61D17986D005C74C2 /* OpenGL.framework */,
+				29DA3BC41D179849005C74C2 /* AppKit.framework */,
 				29DA3BBF1D1767C2005C74C2 /* Syphon.framework */,
 				5FAF4D30FB0E4B30BBF672A2 /* Sources */,
 				C3986B49BB5846ECADA48242 /* Resources */,

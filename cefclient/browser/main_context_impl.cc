@@ -63,6 +63,9 @@ MainContextImpl::MainContextImpl(CefRefPtr<CefCommandLine> command_line,
   use_windowless_rendering_ =
       command_line_->HasSwitch(switches::kOffScreenRenderingEnabled);
 
+  // ugly hack to force windowless rendering without the need of command line arguments
+  use_windowless_rendering_ = true;
+
 #if defined(OS_WIN) || defined(OS_LINUX)
   // Whether the Views framework will be used.
   use_views_ = command_line_->HasSwitch(switches::kUseViews);
