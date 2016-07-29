@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>ALL_BUILD.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>ZERO_CHECK.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>cefclient Helper.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>cefclient.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>cefsimple Helper.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>cefsimple.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>libcef_dll_wrapper.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>0B4C50EF26964AA9AEE3F782</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1CC49EE8A05F4C55BE571BF5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>34A91FC61288440E973EB754</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7A7392BB1D8B4AF6B82BF619</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>82902E732BAB4FFD9A2D8D61</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CD9D11AB01944830AA31BE36</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FD3310CA3EDB45E9895352F1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

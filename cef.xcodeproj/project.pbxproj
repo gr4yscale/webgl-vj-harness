@@ -477,7 +477,7 @@
 		1A381AECE3F04BC3BAA2A70D /* client_cpptoc.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = client_cpptoc.cc; path = libcef_dll/cpptoc/client_cpptoc.cc; sourceTree = SOURCE_ROOT; };
 		1A5FDCED022B4478B63ECF25 /* client_app.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = client_app.cc; path = cefclient/common/client_app.cc; sourceTree = SOURCE_ROOT; };
 		1C05B3859E044438A1A935E7 /* sslcert_principal_ctocpp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sslcert_principal_ctocpp.h; path = libcef_dll/ctocpp/sslcert_principal_ctocpp.h; sourceTree = SOURCE_ROOT; };
-		1C4864929DA64AB7A56BEFC3 /* cefsimple Helper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; name = "cefsimple Helper"; path = "cefsimple Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C4864929DA64AB7A56BEFC3 /* cefsimple Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = "cefsimple Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CBA1CAF9D744E8CA5DBD19F /* client_handler.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = client_handler.cc; path = cefclient/browser/client_handler.cc; sourceTree = SOURCE_ROOT; };
 		1D48A915BAF943599F4AD783 /* life_span_handler_cpptoc.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = life_span_handler_cpptoc.h; path = libcef_dll/cpptoc/life_span_handler_cpptoc.h; sourceTree = SOURCE_ROOT; };
 		1D66BD2B365C4713A95AB3F0 /* dialog_handler_cpptoc.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = dialog_handler_cpptoc.cc; path = libcef_dll/cpptoc/dialog_handler_cpptoc.cc; sourceTree = SOURCE_ROOT; };
@@ -586,7 +586,7 @@
 		3E6701B2A4B04F80B51B0246 /* cef_platform_thread.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cef_platform_thread.h; path = include/base/cef_platform_thread.h; sourceTree = SOURCE_ROOT; };
 		3E74A1E7AD0F4812BBA13CE6 /* temp_window_mac.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = temp_window_mac.h; path = cefclient/browser/temp_window_mac.h; sourceTree = SOURCE_ROOT; };
 		3E805BFC30524DB3BE59668F /* cef_menu_button_delegate_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cef_menu_button_delegate_capi.h; path = include/capi/views/cef_menu_button_delegate_capi.h; sourceTree = SOURCE_ROOT; };
-		3EBC2D24CC36427EB14BDF7E /* cefsimple */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; name = cefsimple; path = cefsimple.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EBC2D24CC36427EB14BDF7E /* cefsimple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = cefsimple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ED0009375D0404F8F9353CC /* domdocument_ctocpp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = domdocument_ctocpp.h; path = libcef_dll/ctocpp/domdocument_ctocpp.h; sourceTree = SOURCE_ROOT; };
 		3F70D5B6C92747F591E2607D /* cef_window_delegate_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cef_window_delegate_capi.h; path = include/capi/views/cef_window_delegate_capi.h; sourceTree = SOURCE_ROOT; };
 		3FE4520AD2434B57AFD3ED4B /* simple_app.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = simple_app.cc; path = cefsimple/simple_app.cc; sourceTree = SOURCE_ROOT; };
@@ -757,7 +757,7 @@
 		8706AEA0CE5B42A1A8BE1EAC /* cef_task.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cef_task.h; path = include/cef_task.h; sourceTree = SOURCE_ROOT; };
 		87249CC782944FE3A5792A47 /* response_filter_cpptoc.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = response_filter_cpptoc.h; path = libcef_dll/cpptoc/response_filter_cpptoc.h; sourceTree = SOURCE_ROOT; };
 		87256A3052BF46909F0E4DAF /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		872DD59F178F45778C13DC2A /* cefclient Helper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; name = "cefclient Helper"; path = "cefclient Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		872DD59F178F45778C13DC2A /* cefclient Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = "cefclient Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		873522B68DE4420EB3BC79C8 /* cef_response_filter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cef_response_filter.h; path = include/cef_response_filter.h; sourceTree = SOURCE_ROOT; };
 		875F362A648046DE9BA2364B /* cef_cancelable_callback.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cef_cancelable_callback.h; path = include/base/cef_cancelable_callback.h; sourceTree = SOURCE_ROOT; };
 		87956D86BD8F46CA90DACE3A /* cef_bind_internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cef_bind_internal.h; path = include/base/internal/cef_bind_internal.h; sourceTree = SOURCE_ROOT; };
@@ -1153,9 +1153,9 @@
 			children = (
 				01D0855C3A9040C2ACEB7E36 /* libcef_dll_wrapper.a */,
 				1578749E9EE64CD0AF392ED0 /* cefclient.app */,
-				872DD59F178F45778C13DC2A /* cefclient Helper */,
-				3EBC2D24CC36427EB14BDF7E /* cefsimple */,
-				1C4864929DA64AB7A56BEFC3 /* cefsimple Helper */,
+				872DD59F178F45778C13DC2A /* cefclient Helper.app */,
+				3EBC2D24CC36427EB14BDF7E /* cefsimple.app */,
+				1C4864929DA64AB7A56BEFC3 /* cefsimple Helper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2066,7 +2066,7 @@
 			);
 			name = "cefclient Helper";
 			productName = "cefclient Helper";
-			productReference = 872DD59F178F45778C13DC2A /* cefclient Helper */;
+			productReference = 872DD59F178F45778C13DC2A /* cefclient Helper.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1CC49EE8A05F4C55BE571BF5 /* cefclient */ = {
@@ -2122,7 +2122,7 @@
 			);
 			name = "cefsimple Helper";
 			productName = "cefsimple Helper";
-			productReference = 1C4864929DA64AB7A56BEFC3 /* cefsimple Helper */;
+			productReference = 1C4864929DA64AB7A56BEFC3 /* cefsimple Helper.app */;
 			productType = "com.apple.product-type.application";
 		};
 		82902E732BAB4FFD9A2D8D61 /* cefsimple */ = {
@@ -2142,7 +2142,7 @@
 			);
 			name = cefsimple;
 			productName = cefsimple;
-			productReference = 3EBC2D24CC36427EB14BDF7E /* cefsimple */;
+			productReference = 3EBC2D24CC36427EB14BDF7E /* cefsimple.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
