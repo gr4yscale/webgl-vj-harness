@@ -1288,7 +1288,9 @@ bool BrowserWindowOsrMac::GetScreenPoint(CefRefPtr<CefBrowser> browser,
   if (!nsview_)
     return false;
 
-  const float device_scale_factor = [GLView(nsview_) getDeviceScaleFactor];
+  // HACK: force scale factor of 1.0, retina causes performance issues
+  const float device_scale_factor = 1.0;
+  //const float device_scale_factor = [GLView(nsview_) getDeviceScaleFactor];
 
   // (viewX, viewX) is in browser view coordinates.
   // Convert to device coordinates.

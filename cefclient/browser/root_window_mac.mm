@@ -223,12 +223,12 @@ NSButton* MakeButton(NSRect* rect, NSString* title, NSView* parent) {
   return button;
 }
 
-NSRect GetScreenRectForWindow(NSWindow* window) {
-  NSScreen* screen = [window screen];
-  if (screen == nil)
-    screen = [NSScreen mainScreen];
-  return [screen visibleFrame];
-}
+//NSRect GetScreenRectForWindow(NSWindow* window) {
+//  NSScreen* screen = [window screen];
+//  if (screen == nil)
+//    screen = [NSScreen mainScreen];
+//  return [screen visibleFrame];
+//}
 
 }  // namespace
 
@@ -372,7 +372,9 @@ void RootWindowMac::SetBounds(int x, int y, size_t width, size_t height) {
   if (!window_)
     return;
 
-  NSRect screen_rect = GetScreenRectForWindow(window_);
+//  NSRect screen_rect = GetScreenRectForWindow(window_);
+    NSRect screen_rect = CGRectMake(0, 54, 1024, 854);
+
 
   // Desired content rectangle.
   NSRect content_rect;
@@ -384,6 +386,8 @@ void RootWindowMac::SetBounds(int x, int y, size_t width, size_t height) {
   NSRect frame_rect = [window_ frameRectForContentRect:content_rect];
   frame_rect.origin.x = x;
   frame_rect.origin.y = screen_rect.size.height - y;
+
+  frame_rect = CGRectMake(0, 0, 1024, 854);
 
   [window_ setFrame:frame_rect display:YES];
 }
@@ -401,14 +405,14 @@ void RootWindowMac::SetDeviceScaleFactor(float device_scale_factor) {
   REQUIRE_MAIN_THREAD();
 
   if (browser_window_)
-    browser_window_->SetDeviceScaleFactor(device_scale_factor);
+    browser_window_->SetDeviceScaleFactor(1.0);
 }
 
 float RootWindowMac::GetDeviceScaleFactor() const {
   REQUIRE_MAIN_THREAD();
 
-  if (browser_window_)
-    return browser_window_->GetDeviceScaleFactor();
+//  if (browser_window_)
+//    return browser_window_->GetDeviceScaleFactor();
   return 1.0f;
 }
 
@@ -452,8 +456,8 @@ void RootWindowMac::CreateRootWindow(const CefBrowserSettings& settings) {
   int width, height;
   if (start_rect_.IsEmpty()) {
     // TODO(port): Also, maybe there's a better way to choose the default size.
-    width = 800;
-    height = 600;
+    width = 1024;
+    height = 800;
   } else {
     width = start_rect_.width;
     height = start_rect_.height;

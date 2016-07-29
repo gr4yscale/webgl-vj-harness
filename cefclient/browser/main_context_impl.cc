@@ -135,6 +135,9 @@ void MainContextImpl::PopulateBrowserSettings(CefBrowserSettings* settings) {
     settings->windowless_frame_rate = atoi(command_line_->
         GetSwitchValue(switches::kOffScreenFrameRate).ToString().c_str());
   }
+
+  // HACK: force the off screen renderer to max out at 60fps
+  settings->windowless_frame_rate = 60.0;
 }
 
 void MainContextImpl::PopulateOsrSettings(OsrRenderer::Settings* settings) {
